@@ -1,0 +1,30 @@
+﻿@*John Berthelsen*@
+@*Grade Calculator HTML*@
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Grade Calculator";
+}
+
+@model GradeCalcModel;
+<!--Grade Calculator Form-->
+<div style="align-content: center; align-items:center; align-self:center;">
+    <form method="post" style="text-align: center; align-content: center; align-items:center; display: flex; flex-direction: column; justify-content: center; outline: 5px solid red; width: 350px;">
+        <h2>Grade Calculator</h2>
+        <label>Assignments %</label><br />
+        <input id="AssignmentsPct" asp-for="Assignments" type="number"/><br /><br />
+        <label>Group Project %</label><br />
+        <input id="GroupProjectPct" asp-for="GroupProjects" type="number"/><br /><br />
+        <label>Quizzes %</label><br />
+        <input id="QuizzesPct" asp-for="Quizzes" type="number"/><br /><br />
+        <label>Exams %</label><br />
+        <input id="ExamsPct" asp-for="Exams" type="number"/><br /><br />
+        <label>INTEX %</label><br />
+        <input id="INTEXPct" asp-for="INTEX" type="number"/><br /><br />
+        <button id="btnCalc" type="submit" value="Calculate">Calculate</button>
+
+        <div asp-validation-summary="All"></div>
+    </form>
+</div>
+<br />

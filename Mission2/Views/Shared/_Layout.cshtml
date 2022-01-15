@@ -1,0 +1,41 @@
+﻿@*John Berthelsen*@
+@*Master HTML page*@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <!--Webpage Title-->
+    <title>@ViewData["Title"]</title>
+    <!--Bootstrap CSS-->
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!--My Custom CSS-->
+    <link href="~/css/default.css" rel="stylesheet" />
+    <!--Custom Tab Icon-->
+    <link href="~/img/scubaflag.png" rel="icon" />
+
+</head>
+
+<body>
+
+    <nav>
+        <a asp-controller="Blah" asp-action="Index" style="color:white; padding-left:200px; padding-top:50px; font-size:x-large;">Home</a>&nbsp;&nbsp;
+        <a asp-controller="Blah" asp-action="GradeCalc" style="color: white; padding-top: 50px; font-size: x-large;">Grade Calculator</a>
+    </nav>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    @*<footer style="text-align:center; align-items:center; align-content:center; color:darkcyan;">&copy Copyright 2022</footer>*@
+
+    <!--JavaScript-->
+    <script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script src="~/js/GradeCalc.js"></script>
+
+</body>
+
+</html>
